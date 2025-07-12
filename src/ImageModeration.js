@@ -106,6 +106,9 @@ const handleSubmit = async () => {
               <img src={preview} alt="Preview" className="max-w-full h-auto rounded-lg" style={{ maxHeight: '200px' }} />
             </div>
           )}
+           <p className="mt-2 text-gray-500 text-sm text-center">
+             ⚠️ The first request may take up to 45 seconds while the server warms up.
+            </p>
           <button
             className={`w-full py-2 px-4 rounded-lg font-semibold text-white transition-colors ${
               isLoading || (!imageFile && !imageUrl.trim())

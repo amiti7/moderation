@@ -54,6 +54,9 @@ const TextModeration = () => {
               value={inputText}
               onChange={(e) => setInputText(e.target.value)}
             />
+            <p className="mt-2 text-gray-500 text-sm text-center">
+             ⚠️ The first request may take up to 45 seconds while the server warms up.
+            </p>
             <button
               className={`w-full mt-3 py-2 px-4 rounded-lg font-semibold text-white transition-colors ${
                 isLoading || !inputText.trim()
@@ -63,6 +66,7 @@ const TextModeration = () => {
               onClick={handleSubmit}
               disabled={isLoading || !inputText.trim()}
             >
+            
               {isLoading ? (
                 <span className="flex items-center justify-center">
                   <svg className="animate-spin h-5 w-5 mr-2 text-white" viewBox="0 0 24 24">
